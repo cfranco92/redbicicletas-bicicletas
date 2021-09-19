@@ -14,18 +14,18 @@ async function getBicycleById(filterBicycle) {
     return bicycle;
 }
 
-async function updateBicycle(id, name, user) {
+async function updateBicycle(id, bicycle) {
     const founBicycle = await Model.findOne({
         _id: id
     });
-    founBicycle.name = name
-    founBicycle.user = user
+    founBicycle.name = bicycle.name
+    founBicycle.user = bicycle.user
 
     const newStatus = await founBicycle.save();
     return newStatus;
 }
 
-function deleteBicycleById() {
+function deleteBicycleById(id) {
     return Model.deleteOne({ _id: id })
 }
 

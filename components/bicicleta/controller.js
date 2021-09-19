@@ -33,7 +33,7 @@ function updateBicycleById(id, name, user) {
             user
         }
 
-        const result = await store.update(id, bicycle);
+        const result = await store.updateById(id, bicycle);
 
         resolve(result);
     })
@@ -45,7 +45,7 @@ function deleteBicycleById(id) {
             reject('Invalid Id');
             return false;
         }
-        store.remove(id)
+        store.deleteById(id)
             .then(() => {
                 resolve();
             })

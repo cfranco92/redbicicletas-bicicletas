@@ -39,7 +39,7 @@ function getBicycles(req, res) {
         });
 };
 
-function updateBicycle() {
+function updateBicycle(req, res) {
     controller.updateBicycleById(req.params.id,
         req.body.name,
         req.body.user,
