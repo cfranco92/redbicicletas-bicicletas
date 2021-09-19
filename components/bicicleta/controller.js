@@ -1,21 +1,21 @@
 const store = require('./store');
 
-function addBicicleta(name) {
+function addBicycle(name) {
     if (!name) {
         return Promise.reject('Invalid name');
     }
 
-    const bicicleta = {
+    const bicycle = {
         name,
     };
-    return store.add(bicicleta);
+    return store.add(bicycle);
 }
 
-function listBicicletas() {
+function listBicycles() {
     return store.list();
 }
 
 module.exports = {
-    addBicicleta,
-    listBicicletas,
+    addBicycle,
+    listBicycles,
 }

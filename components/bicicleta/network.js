@@ -4,7 +4,7 @@ const controller = require('./controller');
 const router = express.Router();
 
 router.post('/', function (req, res) {
-    controller.addBicicleta(req.body.name)
+    controller.addBicycle(req.body.name)
         .then(data => {
             response.success(req, res, data, 201);
         })
@@ -14,7 +14,7 @@ router.post('/', function (req, res) {
 });
 
 router.get('/', function (req, res) {
-    controller.listBicicletas()
+    controller.listBicycles()
         .then(bicicletas => {
             response.success(req, res, bicicletas, 200);
         })
