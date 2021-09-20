@@ -1,8 +1,9 @@
+FROM golang as builder
+RUN go get github.com/centraldelbarbero/redbicicletas-bicicletas
+
 FROM node:14-stretch-slim
 
 # Create app directory
-RUN apt-get update
-RUN apt-get install curl -y
 RUN mkdir /app
 WORKDIR /app
 
