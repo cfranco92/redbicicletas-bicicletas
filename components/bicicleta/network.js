@@ -3,6 +3,7 @@ const response = require('../../network/response');
 const controller = require('./controller');
 const router = express.Router();
 
+// END-POINTS
 router.post('/', createBicycle);
 router.get('/:id', getBicycleById)
 router.get('/', getBicycles);
