@@ -21,9 +21,9 @@ async function updateBicycle(id, bicycle) {
 
     founBicycle.bicycleId = bicycle.bicycleId;
     founBicycle.color = bicycle.color;
-    founBicycle.model = bicycle.longitude;
-    founBicycle.latitude = latitude;
-    founBicycle.longitude = longitude;
+    founBicycle.model = bicycle.model;
+    founBicycle.latitude = bicycle.latitude;
+    founBicycle.longitude = bicycle.longitude;
 
     const newStatus = await founBicycle.save();
     return newStatus;
