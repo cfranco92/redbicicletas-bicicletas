@@ -3,8 +3,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const mySchema = new Schema({
-    name: String,
-    user: String
+    bicycleId: String,
+    color: String,
+    model: String,
+    latitude: Number,
+    longitude: Number,
 });
 
 const model = mongoose.model('Bicicleta', mySchema);

@@ -18,8 +18,12 @@ async function updateBicycle(id, bicycle) {
     const founBicycle = await Model.findOne({
         _id: id
     });
-    founBicycle.name = bicycle.name
-    founBicycle.user = bicycle.user
+
+    founBicycle.bicycleId = bicycle.bicycleId;
+    founBicycle.color = bicycle.color;
+    founBicycle.model = bicycle.longitude;
+    founBicycle.latitude = latitude;
+    founBicycle.longitude = longitude;
 
     const newStatus = await founBicycle.save();
     return newStatus;
