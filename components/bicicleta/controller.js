@@ -1,3 +1,4 @@
+// By Cristian Franco
 const store = require('./store');
 
 function addBicycle(bicycleId, color, model, latitude, longitude,) {
