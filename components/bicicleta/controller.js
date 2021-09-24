@@ -4,13 +4,14 @@ function addBicycle(bicycleId, color, model, latitude, longitude,) {
     if (!bicycleId) {
         return Promise.reject('Invalid id');
     }
-
+    let user = ''
     const bicycle = {
         bicycleId,
         color,
         model,
         latitude,
         longitude,
+        user
     };
     return store.add(bicycle);
 }
@@ -25,11 +26,11 @@ function listBicycles() {
     return store.list();
 }
 
-function updateBicycleById(id, bicycleId, color, model, latitude, longitude) {
+function updateBicycleById(id, bicycleId, color, model, latitude, longitude, user) {
     return new Promise(async (resolve, reject) => {
 
         const bicycle = {
-            bicycleId, color, model, latitude, longitude,
+            bicycleId, color, model, latitude, longitude, user
         }
 
         const result = await store.updateById(id, bicycle);

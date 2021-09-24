@@ -8,6 +8,7 @@ const mySchema = new Schema({
     model: String,
     latitude: Number,
     longitude: Number,
+    user: String
 });
 
 const model = mongoose.model('Bicicleta', mySchema);

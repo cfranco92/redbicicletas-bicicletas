@@ -42,7 +42,7 @@ function getBicycles(req, res) {
 
 function updateBicycle(req, res) {
     controller.updateBicycleById(req.params.id,
-        req.body.bicycleId, req.body.color, req.body.model, req.body.latitude, req.body.longitude
+        req.body.bicycleId, req.body.color, req.body.model, req.body.latitude, req.body.longitude, req.body.user
     )
         .then((data) => {
             response.success(req, res, data, 200);
