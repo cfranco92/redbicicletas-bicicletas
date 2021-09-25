@@ -1,7 +1,7 @@
 FROM golang as builder
 RUN go get github.com/centraldelbarbero/redbicicletas-bicicletas
 
-FROM node:14.17.6
+FROM node:14-stretch-slim
 
 # Create app directory
 RUN mkdir /app
